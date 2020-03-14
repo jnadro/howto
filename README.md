@@ -1,0 +1,1 @@
+Concise, pedagogical example code on how to accomplish various things.  Mostly here as a reference for myself. Hopefully others find it useful!
