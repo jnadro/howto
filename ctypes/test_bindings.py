@@ -48,7 +48,6 @@ print(lib.add_float(2.25, 0.75))
 
 print(lib.add_float(2, 0.75))
 
-
 saxpy = lib.saxpy
 # ctypes.POINTER() is used to declare a pointer to the type passed in.
 saxpy.argtypes = [ctypes.c_uint, ctypes.c_float, ctypes.POINTER(ctypes.c_float), ctypes.POINTER(ctypes.c_float)]
@@ -68,3 +67,9 @@ y = FloatArrayType(2.0, 2.0, 2.0, 2.0, 2.0)
 
 saxpy(n, a, x, y)
 for i in y: print(i, end=" ")
+
+class Point(ctypes.Structure):
+  _fields = [("x", ctypes.c_float),
+             ("y", ctypes.c_float)]
+p = Point(x=5.0, y=50.0)
+print(p.x, p.y)
